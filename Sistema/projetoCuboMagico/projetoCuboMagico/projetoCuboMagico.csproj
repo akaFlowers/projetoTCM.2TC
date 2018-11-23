@@ -1,0 +1,348 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{541BF15C-E466-4BCB-B4E5-4B97263BF4B9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>projetoCuboMagico</RootNamespace>
+    <AssemblyName>projetoCuboMagico</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controlador\ControladorFrmAlterarCliente.cs" />
+    <Compile Include="Controlador\ControladorFrmAlterarEditora.cs" />
+    <Compile Include="Controlador\ControladorFrmAlterarFuncionario.cs" />
+    <Compile Include="Controlador\ControladorFrmAlterarLivro.cs" />
+    <Compile Include="Controlador\ControladorFrmAlterarProduto.cs" />
+    <Compile Include="Controlador\ControladorFrmAlterarUsuario.cs" />
+    <Compile Include="Controlador\ControladorFrmCadastroCliente.cs" />
+    <Compile Include="Controlador\ControladorFrmCadastroEditora.cs" />
+    <Compile Include="Controlador\ControladorFrmCadastroProduto.cs" />
+    <Compile Include="Controlador\ControladorFrmCaixa.cs" />
+    <Compile Include="Controlador\ControladorFrmConsultaEditora.cs" />
+    <Compile Include="Controlador\ControladorFrmCadastroLivro.cs" />
+    <Compile Include="Controlador\ControladorFrmConsultaLivro.cs" />
+    <Compile Include="Controlador\ControladorFrmCadastroFuncionario.cs" />
+    <Compile Include="Controlador\ControladorFrmConsultaFuncionario.cs" />
+    <Compile Include="Controlador\ControladorFrmCadastroUsuario.cs" />
+    <Compile Include="Controlador\ControladorFrmConsultaCliente.cs" />
+    <Compile Include="Controlador\ControladorFrmConsultaProduto.cs" />
+    <Compile Include="Controlador\ControladorFrmConsultaUsuario.cs" />
+    <Compile Include="Controlador\ControladorFrmFecharCaixa.cs" />
+    <Compile Include="Controlador\ControladorTelaLogin.cs" />
+    <Compile Include="Controlador\ControladorTelaPrincipal.cs" />
+    <Compile Include="domínio\Cliente.cs" />
+    <Compile Include="domínio\Editora.cs" />
+    <Compile Include="domínio\Funcionario.cs" />
+    <Compile Include="domínio\Livro.cs" />
+    <Compile Include="domínio\Produto.cs" />
+    <Compile Include="domínio\TipoDeAcesso.cs" />
+    <Compile Include="domínio\Usuario.cs" />
+    <Compile Include="persistencia\Conexao.cs" />
+    <Compile Include="repositorio\RepositorioCaixa.cs" />
+    <Compile Include="repositorio\RepositorioCliente.cs" />
+    <Compile Include="repositorio\RepositorioEditora.cs" />
+    <Compile Include="repositorio\RepositorioFuncionario.cs" />
+    <Compile Include="repositorio\RepositorioLivro.cs" />
+    <Compile Include="repositorio\RepositorioProduto.cs" />
+    <Compile Include="repositorio\RepositorioUsuario.cs" />
+    <Compile Include="tela\Alterar\FrmAlterarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tela\Alterar\FrmAlterarCliente.Designer.cs">
+      <DependentUpon>FrmAlterarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tela\Alterar\FrmAlterarEditora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tela\Alterar\FrmAlterarEditora.Designer.cs">
+      <DependentUpon>FrmAlterarEditora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tela\Alterar\FrmAlterarFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tela\Alterar\FrmAlterarFuncionario.Designer.cs">
+      <DependentUpon>FrmAlterarFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tela\Alterar\FrmAlterarLivro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tela\Alterar\FrmAlterarLivro.Designer.cs">
+      <DependentUpon>FrmAlterarLivro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tela\Alterar\FrmAlterarProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tela\Alterar\FrmAlterarProduto.Designer.cs">
+      <DependentUpon>FrmAlterarProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tela\Alterar\FrmAlterarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tela\Alterar\FrmAlterarUsuario.Designer.cs">
+      <DependentUpon>FrmAlterarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tela\Cadastro\FrmCadastroCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tela\Cadastro\FrmCadastroCliente.Designer.cs">
+      <DependentUpon>FrmCadastroCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tela\Cadastro\FrmCadastroEditora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tela\Cadastro\FrmCadastroEditora.Designer.cs">
+      <DependentUpon>FrmCadastroEditora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tela\Cadastro\FrmCadastroFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tela\Cadastro\FrmCadastroFuncionario.Designer.cs">
+      <DependentUpon>FrmCadastroFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tela\Cadastro\FrmCadastroLivro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tela\Cadastro\FrmCadastroLivro.Designer.cs">
+      <DependentUpon>FrmCadastroLivro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tela\Cadastro\FrmCadastroProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tela\Cadastro\FrmCadastroProduto.Designer.cs">
+      <DependentUpon>FrmCadastroProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tela\Cadastro\FrmCadastroUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tela\Cadastro\FrmCadastroUsuario.Designer.cs">
+      <DependentUpon>FrmCadastroUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tela\Caixa\FrmCaixa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tela\Caixa\FrmCaixa.Designer.cs">
+      <DependentUpon>FrmCaixa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tela\Caixa\FrmFecharBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tela\Caixa\FrmFecharBox.Designer.cs">
+      <DependentUpon>FrmFecharBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tela\Consulta\FrmConsultaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tela\Consulta\FrmConsultaCliente.Designer.cs">
+      <DependentUpon>FrmConsultaCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tela\Consulta\FrmConsultaEditora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tela\Consulta\FrmConsultaEditora.Designer.cs">
+      <DependentUpon>FrmConsultaEditora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tela\Consulta\FrmConsultaFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tela\Consulta\FrmConsultaFuncionario.Designer.cs">
+      <DependentUpon>FrmConsultaFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tela\Consulta\FrmConsultaLivro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tela\Consulta\FrmConsultaLivro.Designer.cs">
+      <DependentUpon>FrmConsultaLivro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tela\Consulta\FrmConsultaProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tela\Consulta\FrmConsultaProduto.Designer.cs">
+      <DependentUpon>FrmConsultaProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tela\Consulta\FrmConsultaUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tela\Consulta\FrmConsultaUsuario.Designer.cs">
+      <DependentUpon>FrmConsultaUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tela\Login\TelaLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tela\Login\TelaLogin.Designer.cs">
+      <DependentUpon>TelaLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tela\Principal\FrmInicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tela\Principal\FrmInicio.Designer.cs">
+      <DependentUpon>FrmInicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tela\Principal\TelaPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tela\Principal\TelaPrincipal.Designer.cs">
+      <DependentUpon>TelaPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="tela\Alterar\FrmAlterarCliente.resx">
+      <DependentUpon>FrmAlterarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tela\Alterar\FrmAlterarEditora.resx">
+      <DependentUpon>FrmAlterarEditora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tela\Alterar\FrmAlterarFuncionario.resx">
+      <DependentUpon>FrmAlterarFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tela\Alterar\FrmAlterarLivro.resx">
+      <DependentUpon>FrmAlterarLivro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tela\Alterar\FrmAlterarProduto.resx">
+      <DependentUpon>FrmAlterarProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tela\Alterar\FrmAlterarUsuario.resx">
+      <DependentUpon>FrmAlterarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tela\Cadastro\FrmCadastroCliente.resx">
+      <DependentUpon>FrmCadastroCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tela\Cadastro\FrmCadastroEditora.resx">
+      <DependentUpon>FrmCadastroEditora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tela\Cadastro\FrmCadastroFuncionario.resx">
+      <DependentUpon>FrmCadastroFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tela\Cadastro\FrmCadastroLivro.resx">
+      <DependentUpon>FrmCadastroLivro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tela\Cadastro\FrmCadastroProduto.resx">
+      <DependentUpon>FrmCadastroProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tela\Cadastro\FrmCadastroUsuario.resx">
+      <DependentUpon>FrmCadastroUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tela\Caixa\FrmCaixa.resx">
+      <DependentUpon>FrmCaixa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tela\Caixa\FrmFecharBox.resx">
+      <DependentUpon>FrmFecharBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tela\Consulta\FrmConsultaCliente.resx">
+      <DependentUpon>FrmConsultaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tela\Consulta\FrmConsultaEditora.resx">
+      <DependentUpon>FrmConsultaEditora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tela\Consulta\FrmConsultaFuncionario.resx">
+      <DependentUpon>FrmConsultaFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tela\Consulta\FrmConsultaLivro.resx">
+      <DependentUpon>FrmConsultaLivro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tela\Consulta\FrmConsultaProduto.resx">
+      <DependentUpon>FrmConsultaProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tela\Consulta\FrmConsultaUsuario.resx">
+      <DependentUpon>FrmConsultaUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tela\Login\TelaLogin.resx">
+      <DependentUpon>TelaLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tela\Principal\FrmInicio.resx">
+      <DependentUpon>FrmInicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tela\Principal\TelaPrincipal.resx">
+      <DependentUpon>TelaPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="docs\" />
+    <Folder Include="utilitarios\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\Fechar_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\Lupa_20x20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bd\Banco_De_Dados.sql" />
+    <Content Include="bd\Insert_Necessarios_Banco.sql" />
+    <None Include="resources\caixa.png" />
+    <None Include="resources\1055107-24%281%29.png" />
+    <None Include="resources\1054976-24.png" />
+    <None Include="resources\1055019-24.png" />
+    <None Include="resources\1054988-241.png" />
+    <None Include="resources\1054988-24.png" />
+    <None Include="resources\1055000-24.png" />
+    <None Include="resources\if_dolly_1055070.png" />
+    <None Include="resources\if_brush-pencil_1055103.png" />
+    <None Include="resources\if_zoomin_1054932.png" />
+    <None Include="resources\if_compose_1055085 %281%29.png" />
+    <None Include="resources\if_present_1055001.png" />
+    <None Include="resources\if_gear_1055051.png" />
+    <None Include="resources\if_gear_406863.png" />
+    <None Include="resources\if_Rubics_Cube_toy_magic_cube_geek_3108922.png" />
+    <None Include="resources\Logout_32x32.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
